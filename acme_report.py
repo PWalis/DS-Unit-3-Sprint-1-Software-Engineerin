@@ -1,6 +1,6 @@
 from acme import Product
 import random 
-
+from statistics import mean
 
 adjectives = ['Awesome', 'Shiny', 'Impressive',
   'Portable', 'Improved']
@@ -14,6 +14,7 @@ def generate_name():
     return name
 
 def generate_products(number=30):
+    number = number
     x=[]
     for i in range(0, number):
         name = generate_name()
@@ -22,11 +23,30 @@ def generate_products(number=30):
         x.append(prod)
     return x
 
-# print(generate_products(2))
+# prod_list = generate_products()
 
-def inventory_report():
-    
+def inventory_report(products):
+    unique_list=[]
+    price_list=[]
+    weight_list=[]
+    flammability_list=[]
+    for i in products:
+        price_list.append(i.price)
+        weight_list.append(i.weight)
+        flammability_list.append(i.flammability)
+        if i.name not in unique_list:
+            unique_list.append(i.name)
 
+    print('ACME CORPRATION OFFICIAL INVENTORY REPORT',
+            '\nUnique Product Names:', len(unique_list),
+            '\nAverage Price:', mean(price_list),
+            '\nAverage Weight:', mean(weight_list),
+            '\nAverage Flammability', mean(flammability_list))
+
+# inventory_report(prod_list)
+
+if __name__ == '__main__':
+    inventory_report(generate_products())
     
 
 
