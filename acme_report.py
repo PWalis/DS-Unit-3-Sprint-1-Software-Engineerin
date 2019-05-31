@@ -11,7 +11,7 @@ def generate_name():
     name_list = random.sample(adjectives, 1), random.sample(nouns, 1)
     name_tup = name_list[0][0],name_list[1][0]
     name = ''.join(name_tup)
-    return name
+    return name_list
 
 def generate_products(number=30):
     number = number

@@ -1,6 +1,6 @@
 
 from acme import Product, BoxingGlove
-from acme_report import generate_products
+from acme_report import generate_products, adjectives, nouns
 import unittest 
 
 
@@ -36,7 +36,10 @@ class AcmeReportTest(unittest.TestCase):
         self.assertEqual(len(generate_products()), 30)
 
     def test_legal_names(self):
-        self.assertIn()
+        gen_list = generate_products()
+        for i in gen_list:
+            self.assertIn(i.name[0][0], adjectives)
+            self.assertIn(i.name[1][0], nouns)
 
 
 if __name__ == '__main__':

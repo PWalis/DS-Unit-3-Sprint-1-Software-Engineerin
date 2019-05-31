@@ -270,6 +270,10 @@ career here, you'll have to answer the following:
 
 Answer both of these questions (baseline ~5 sentences) here in text.
 
+Code reviews as a whole are important but the main thing is being able to understand what is being done in the code. Comments describing what is happening and how to use the code is what I look for when doing a code review. I appreciate little to moderate snippets of code because it's a lot easier to understand what is happening, and good naming choices that are descriptive but nor super long. I enjoy when someone tells me how I can improve the usability of my code, because i'm the one coding everything I know exactly whats going on but to others not so much. Constructive feedback is the BEST. 
+
+Containers allow us to run code so that it works no problem. Every machine is a little different and trying to use code that works on one machine might not work as expected on another. Containers take that issue ot of the equation. It's especially useful when deploying new software for thousands of people to use. You want things to work and for that containers are great.
+
 ### Part 8 - Turn it in!
 
 Add all the files you wrote (`acme.py`, `acme_report.py`, and `acme_test.py`),
