@@ -1,7 +1,6 @@
-
 from acme import Product, BoxingGlove
 from acme_report import generate_products, adjectives, nouns
-import unittest 
+import unittest
 
 
 class product_tester(unittest.TestCase):
@@ -12,7 +11,7 @@ class product_tester(unittest.TestCase):
         self.assertEqual(prod.price, 10)
         prod.explode()
         prod.stealability()
-    
+
     def test_stealability(self):
         prod = Product('A Cool Toy', price=500)
         prod.stealability()
@@ -21,7 +20,6 @@ class product_tester(unittest.TestCase):
         prod = Product('A Cool Toy', flammability=60)
         prod.explode()
 
-
     def test_BoxingGLove(self):
         glove = BoxingGlove('Punchy the third')
         self.assertEqual(glove.name, 'Punchy the third')
@@ -29,7 +27,8 @@ class product_tester(unittest.TestCase):
         self.assertEqual(glove.price, 10)
         glove.explode()
         glove.punch()
-    
+
+
 class AcmeReportTest(unittest.TestCase):
 
     def test_default_num_products(self):
