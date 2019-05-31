@@ -44,7 +44,7 @@ class Product:
 
 class BoxingGlove(Product):
     def __init__(self, name, price=10, weight=10, flammability=0.5,
-            identifier=random.randint(1000000, 9999999)):
+            identifier=None):
         super().__init__(name=name, price=price, weight=weight, flammability=flammability,
              identifier=identifier)
 
